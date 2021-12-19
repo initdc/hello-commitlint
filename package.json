@@ -4,6 +4,7 @@
   "description": "It's time to style commit msg.",
   "main": "index.js",
   "scripts": {
+    "i:hook": "pnpm install && pnpm husky install",
     "dev": "node index.js",
     "test": "jest",
     "release": "standard-version --help",
