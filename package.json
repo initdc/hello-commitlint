@@ -1,14 +1,14 @@
 {
   "name": "hello-commitlint",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "It's time to style commit msg.",
   "main": "index.js",
   "scripts": {
     "dev": "node index.js",
     "test": "jest",
+    "release": "standard-version --help",
     "rel:dr": "standard-version --dry-run",
-    "rel:help": "standard-version --help",
-    "release": "standard-version",
+    "rel:version": "standard-version",
     "pub:github": "conventional-github-releaser -v",
     "pub:npm": "pnpm publish"
   },
