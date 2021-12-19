@@ -16,3 +16,5 @@ pnpm husky add .husky/commit-msg 'pnpm commitlint --edit $1'
 ## Thanks
 
 [commitlint](https://github.com/conventional-changelog/commitlint)
+
+[standard-version](https://github.com/conventional-changelog/standard-version)
