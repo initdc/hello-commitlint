@@ -1,0 +1,36 @@
+{
+  "name": "hello-commitlint",
+  "version": "0.0.0",
+  "description": "It's time to style commit msg.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "jest",
+    "rel:dr": "standard-version --dry-run",
+    "rel:help": "standard-version --help",
+    "release": "standard-version",
+    "pub:github": "conventional-github-releaser -v",
+    "pub:npm": "pnpm publish"
+  },
+  "author": "initdc",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "conventional-github-releaser": "^3.1.5",
+    "husky": "^7.0.4",
+    "jest": "^27.4.5",
+    "standard-version": "^9.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/initdc/hello-commitlint.git"
+  },
+  "keywords": [
+    "commitlint"
+  ],
+  "bugs": {
+    "url": "https://github.com/initdc/hello-commitlint/issues"
+  },
+  "homepage": "https://github.com/initdc/hello-commitlint#readme"
+}
