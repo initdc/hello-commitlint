@@ -21,4 +21,10 @@ function devide(a, b) {
 
 hello("Hello commitlint!");
 
-module.exports = hello;
+module.exports = {
+  hello,
+  sum,
+  minus,
+  times,
+  devide
+};
