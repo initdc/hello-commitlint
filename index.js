@@ -3,6 +3,10 @@ function hello(msg) {
   return msg;
 }
 
-hello("Hello commitlint!")
+function sum(a, b) {
+  return a + b;
+}
+
+hello("Hello commitlint!");
 
 module.exports = hello;
