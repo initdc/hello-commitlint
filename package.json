@@ -4,20 +4,21 @@
   "description": "It's time to style commit msg.",
   "main": "index.js",
   "scripts": {
-    "i:hook": "pnpm install && pnpm husky install",
     "dev": "node index.js",
     "test": "jest",
     "release": "standard-version --help",
     "rel:dr": "standard-version --dry-run",
     "rel:version": "standard-version",
     "pub:github": "conventional-github-releaser -v",
-    "pub:npm": "pnpm publish"
+    "pub:npm": "npm publish",
+    "postinstall": "pnpm husky install"
   },
   "author": "initdc",
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
+    "@commitlint/prompt-cli": "^15.0.0",
     "conventional-github-releaser": "^3.1.5",
     "husky": "^7.0.4",
     "jest": "^27.4.5",
