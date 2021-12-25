@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node index.js",
     "test": "jest",
+    "commit": "commit",
     "release": "standard-version --help",
     "rel:dr": "standard-version --dry-run",
     "rel:version": "standard-version",
