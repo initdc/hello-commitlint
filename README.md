@@ -12,6 +12,8 @@ pnpm add -D husky @commitlint/{config-conventional,cli,prompt-cli} standard-vers
 
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 
+pnpm husky install
+
 pnpm husky add .husky/commit-msg 'pnpm commitlint --edit $1'
 ```
 
@@ -20,11 +22,21 @@ pnpm husky add .husky/commit-msg 'pnpm commitlint --edit $1'
 ```
 "scripts": {
     "commit": "commit",
-    "release": "standard-version --help",
-    "rel:dr": "standard-version --dry-run",
-    "rel:version": "standard-version",
-    "pub:github": "conventional-github-releaser -v",
-    "pub:npm": "npm publish",
+    "fmt:c": "prettier -c .",
+    "fmt:w": "prettier -w .",
+    "rel": "standard-version --help",
+    "rel:d": "standard-version --dry-run",
+    "rel:d:as": "standard-version --dry-run --release-as",
+    "rel:d:m": "standard-version --dry-run --release-as major",
+    "rel:d:n": "standard-version --dry-run --release-as minor",
+    "rel:d:p": "standard-version --dry-run --release-as patch",
+    "rel:v": "standard-version",
+    "rel:v:as": "standard-version --release-as",
+    "rel:v:m": "standard-version --release-as major",
+    "rel:v:n": "standard-version --release-as minor",
+    "rel:v:p": "standard-version --release-as patch",
+    "pub:g": "conventional-github-releaser -v",
+    "pub:n": "npm publish",
     "postinstall": "pnpm husky install"
   },
 ```
