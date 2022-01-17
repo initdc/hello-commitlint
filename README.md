@@ -1,13 +1,25 @@
-# hello-commitlint
+# [hello-commitlint](https://github.com/initdc/hello-commitlint)
+
 > It's time to style commit msg.
 
 ## Reason
 
 A good coding style-guide takes your project further.
 
+## Use template
+
+```sh
+# replace proj
+git clone https://github.com/initdc/commitlint-template.git proj
+
+cd proj && rm -rf .git && git init
+
+pnpm init
+```
 
 ## Install
-```
+
+```sh
 pnpm add -D husky @commitlint/{config-conventional,cli,prompt-cli} standard-version conventional-github-releaser
 
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
@@ -19,7 +31,7 @@ pnpm husky add .husky/commit-msg 'pnpm commitlint --edit $1'
 
 ## Pre-defined scripts
 
-```
+```json
 "scripts": {
     "commit": "commit",
     "fmt:c": "prettier -c .",
