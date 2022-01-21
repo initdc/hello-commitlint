@@ -26,5 +26,5 @@ module.exports = {
   sum,
   minus,
   times,
-  devide
+  devide,
 };

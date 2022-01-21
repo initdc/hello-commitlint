@@ -3,6 +3,22 @@
   "version": "0.0.2",
   "description": "It's time to style commit msg.",
   "main": "index.js",
+  "author": "initdc",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/initdc/hello-commitlint.git"
+  },
+  "keywords": [
+    "commitlint"
+  ],
+  "bugs": {
+    "url": "https://github.com/initdc/hello-commitlint/issues"
+  },
+  "homepage": "https://github.com/initdc/hello-commitlint#readme",
+  "lint-staged": {
+    "*": "prettier -wu ."
+  },
   "scripts": {
     "dev": "node index.js",
     "test": "jest",
@@ -24,8 +40,6 @@
     "pub:n": "npm publish",
     "postinstall": "pnpm husky install"
   },
-  "author": "initdc",
-  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
@@ -33,17 +47,8 @@
     "conventional-github-releaser": "^3.1.5",
     "husky": "^7.0.4",
     "jest": "^27.4.5",
+    "lint-staged": "^12.2.2",
+    "prettier": "^2.5.1",
     "standard-version": "^9.3.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/initdc/hello-commitlint.git"
-  },
-  "keywords": [
-    "commitlint"
-  ],
-  "bugs": {
-    "url": "https://github.com/initdc/hello-commitlint/issues"
-  },
-  "homepage": "https://github.com/initdc/hello-commitlint#readme"
+  }
 }

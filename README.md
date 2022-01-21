@@ -20,22 +20,26 @@ pnpm init
 ## Install
 
 ```sh
-pnpm add -D husky @commitlint/{config-conventional,cli,prompt-cli} standard-version conventional-github-releaser
+pnpm add -D husky prettier lint-staged @commitlint/{config-conventional,cli,prompt-cli} standard-version conventional-github-releaser
 
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 
 pnpm husky install
 
+pnpm husky add .husky/pre-commit 'pnpm lint-staged'
 pnpm husky add .husky/commit-msg 'pnpm commitlint --edit $1'
 ```
 
 ## Pre-defined scripts
 
 ```json
-"scripts": {
+  "lint-staged": {
+    "*": "prettier -wu ."
+  },
+  "scripts": {
     "commit": "commit",
-    "fmt:c": "prettier -c .",
-    "fmt:w": "prettier -w .",
+    "fmt:c": "prettier -cu .",
+    "fmt:w": "prettier -wu .",
     "rel": "standard-version --help",
     "rel:d": "standard-version --dry-run",
     "rel:d:as": "standard-version --dry-run --release-as",
@@ -58,3 +62,7 @@ pnpm husky add .husky/commit-msg 'pnpm commitlint --edit $1'
 [commitlint](https://github.com/conventional-changelog/commitlint)
 
 [standard-version](https://github.com/conventional-changelog/standard-version)
+
+[husky](https://github.com/typicode/husky)
+
+[lint-staged](https://github.com/okonet/lint-staged)
